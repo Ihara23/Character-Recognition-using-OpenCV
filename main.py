@@ -4,12 +4,6 @@ import os
 import math
 
 
-
-#load database - can do with os library 
-# path = "dbase"
-# dir_list = os.listdir(path)
-# print(dir_list)
-
 d_im = np.zeros([20,15], dtype= 'uint8') #database images 20=rows 
 for f in range(1,27,1):
     ff="dbase/l" + str(f) + ".jpg"
@@ -54,6 +48,3 @@ for con in contours:
     if(cv2.waitKey(1) & 0xFF ==ord('q')):
         cv2.destroyAllWindows()
         break
-    
-#cv2.destroyAllWindows()
-
